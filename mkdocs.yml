@@ -1,7 +1,14 @@
 site_name: Formula1
 theme: 'material'
 repo_url: 'https://github.com/JuandiNoguera/ProyectoWeb'
+nav:
+   - Inicio: index.md
+   - Cambios: cambios.md
+   - Pilotos: pilotos.md
+   - Calendario: calendario.md
 extra:
    social:
       - type: 'twitter'
         link: 'https://twitter.com/f1'
+      - type: 'facebook'
+        link: 'https://facebook.com/Formula1'

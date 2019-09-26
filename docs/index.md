@@ -1,16 +1,14 @@
+![F1 logo](./1920px-F1.svg.png)
+
 # Welcome to Formula 1
 
 Web informativa de Formula 1 2019
 
-## Commands
+## Contenido
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
+* [Cambios](./cambios.md)
+* [Pilotos](./pilotos.md)
+* [Circuitos](./calendario.md)
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+http://github.com - automatic!
+[GitHub](http://github.com)
