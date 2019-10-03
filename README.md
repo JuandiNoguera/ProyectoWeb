@@ -7,22 +7,22 @@ Instalación de Mkdocs
 
     apt install python3-venv # Instalamos el entorno virtual
 
-python3 -m venv Desarrollo # Crear entorno virtual
+    python3 -m venv Desarrollo # Crear entorno virtual
 
-source Desarrollo/bin/activate # Activar el entorno
+    source Desarrollo/bin/activate # Activar el entorno
 
-pip install mkdocs # Instalar el generador
+    pip install mkdocs # Instalar el generador
 
-mkdocs new Project1 # Crear un proyecto
+    mkdocs new Project1 # Crear un proyecto
 
-mkdocs serve # Iniciar pagina
-INFO - Building documentation...
-INFO - Cleaning site directory
-[I 190926 10:31:14 server:296] Serving on http://127.0.0.1:8000
-[I 190926 10:31:14 handlers:62] Start watching changes
-[I 190926 10:31:14 handlers:64] Start detecting changes
-[I 190926 10:31:30 handlers:135] Browser Connected: http://127.0.0.1:8000/
-^C[I 190926 10:32:17 server:318] Shutting down...
+    mkdocs serve # Iniciar pagina
+    INFO - Building documentation...
+    INFO - Cleaning site directory
+    [I 190926 10:31:14 server:296] Serving on http://127.0.0.1:8000
+    [I 190926 10:31:14 handlers:62] Start watching changes
+    [I 190926 10:31:14 handlers:64] Start detecting changes
+    [I 190926 10:31:30 handlers:135] Browser Connected: http://127.0.0.1:8000/
+    ^C[I 190926 10:32:17 server:318] Shutting down...
 
 Desarrollado en Python
 
@@ -68,18 +68,35 @@ Para desplegar la aplicación en gitlab pages subí el HTML generado por MKDOCS 
 
 Para crear la pagina tuve que crear un archivo .gitlab-ci.yml con el siguiente contenido:
 
-pages:
-  stage: deploy
-  script:
-  - mkdir .public
-  - cp -r * .public
-  - mv .public public
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
+    pages:
+      stage: deploy
+      script:
+      - mkdir .public
+      - cp -r * .public
+      - mv .public public
+      artifacts:
+        paths:
+        - public
+      only:
+      - master
 
 En gitlab nos vamos a Settings > General > Advanced y le damos nombre al proyecto para poder acceder a el
 
 ##Tarea 6
+
+El script es el siguiente:
+
+    #!/bin/bash
+    
+    cd /home/juandi
+    source Desarrollo/bin/activate
+    cd /home/juandi/github/ProyectoWeb/
+    git add .
+    git commit -m "$1"
+    git push
+    mkdocs build -d ../formula1/
+    cd /home/juandi/github/formula1
+    git add .
+    git commit -m "$1"
+    git push
+    deactivate
