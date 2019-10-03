@@ -5,7 +5,7 @@ Mkdocs y GitLab Pages
 ##Tarea 2
 Instalación de Mkdocs
 
-apt install python3-venv # Instalamos el entorno virtual
+    apt install python3-venv # Instalamos el entorno virtual
 
 python3 -m venv Desarrollo # Crear entorno virtual
 
