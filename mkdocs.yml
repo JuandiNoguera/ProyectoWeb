@@ -1,5 +1,6 @@
 site_name: Formula1
 theme: 'material'
+repo_url: 'https://gitlab.com/JuandiNoguera/formula1'
 repo_url: 'https://github.com/JuandiNoguera/ProyectoWeb'
 nav:
    - Inicio: index.md
