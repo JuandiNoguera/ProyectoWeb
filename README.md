@@ -64,6 +64,22 @@ extra:
 -Pagina web: https://juandinoguera.gitlab.io/formula1/
 
 ##Tarea 5
+Para desplegar la aplicación en gitlab pages subí el HTML generado por MKDOCS a un repositorio de gitlab(https://gitlab.com/JuandiNoguera/formula1)
 
+Para crear la pagina tuve que crear un archivo .gitlab-ci.yml con el siguiente contenido:
+
+pages:
+  stage: deploy
+  script:
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
+En gitlab nos vamos a Settings > General > Advanced y le damos nombre al proyecto para poder acceder a el
 
 ##Tarea 6
