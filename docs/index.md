@@ -1,6 +1,6 @@
 ![F1 logo](./1920px-F1.svg.png)
 
-# Bienvenido a Formula 1
+# Welcome to Formula 1
 
 Web informativa de Formula 1 2019
 
