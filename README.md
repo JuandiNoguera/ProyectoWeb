@@ -86,17 +86,18 @@ En gitlab nos vamos a Settings > General > Advanced y le damos nombre al proyect
 
 El script es el siguiente:
 
-    #!/bin/bash
-    
-    cd /home/juandi
-    source Desarrollo/bin/activate
-    cd /home/juandi/github/ProyectoWeb/
-    git add .
-    git commit -m "$1"
-    git push
-    mkdocs build -d ../formula1/
-    cd /home/juandi/github/formula1
-    git add .
-    git commit -m "$1"
-    git push
-    deactivate
+#!/bin/bash
+
+cd /home/juandi/.virtualenv
+source Desarrollo/bin/activate
+cd /home/juandi/github/ProyectoWeb/
+git add .
+git commit -m "$1"
+git push origin master
+mkdocs build --clean -d ../formula1/
+mkdocs build -d ../formula1/
+cd /home/juandi/github/formula1
+git add .
+git commit -m "$1"
+git push origin master
+deactivate
