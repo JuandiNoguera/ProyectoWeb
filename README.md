@@ -1,8 +1,8 @@
 # ProyectoWeb
-##Tarea 1
+## Tarea 1
 Mkdocs y GitLab Pages
 
-##Tarea 2
+## Tarea 2
 Instalación de Mkdocs
 
     apt install python3-venv # Instalamos el entorno virtual
@@ -28,7 +28,7 @@ Desarrollado en Python
 
 Plantillas en Jinja2
 
-##Tarea 3
+## Tarea 3
 Para configurar el sitio, tema y demas complementos se editara el fichero mkdocs.yml
 _site_name: Formula1
 theme: 'material'
@@ -56,14 +56,14 @@ extra:
         link: 'https://facebook.com/Formula1'
 
 
-##Tarea 4
+## Tarea 4
 - Repositorio de github del generador: https://github.com/JuandiNoguera/ProyectoWeb/
 
 -Repositorio de gitlab del sitio generado: https://gitlab.com/JuandiNoguera/formula1
 
 -Pagina web: https://juandinoguera.gitlab.io/formula1/
 
-##Tarea 5
+## Tarea 5
 Para desplegar la aplicación en gitlab pages subí el HTML generado por MKDOCS a un repositorio de gitlab(https://gitlab.com/JuandiNoguera/formula1)
 
 Para crear la pagina tuve que crear un archivo .gitlab-ci.yml con el siguiente contenido:
@@ -82,7 +82,7 @@ Para crear la pagina tuve que crear un archivo .gitlab-ci.yml con el siguiente c
 
 En gitlab nos vamos a Settings > General > Advanced y le damos nombre al proyecto para poder acceder a el
 
-##Tarea 6
+## Tarea 6
 
 El script es el siguiente:
 
