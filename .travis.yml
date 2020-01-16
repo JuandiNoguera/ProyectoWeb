@@ -1,0 +1,19 @@
+language: python
+python:
+ - "3.6"
+
+branches:
+  only:
+    - master
+
+install:
+ - pip install mkdocs
+
+script: mkdocs build
+
+
+deploy:
+  provider: surge
+  project: .
+  domain: juandi.surge.sh
+  skip_cleanup: true
