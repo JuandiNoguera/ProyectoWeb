@@ -9,8 +9,9 @@ branches:
 install:
  - pip install mkdocs
 
-script: mkdocs build
-
+script: 
+ - mkdocs build --clean
+ - mkdocs build
 
 deploy:
   provider: surge
