@@ -16,5 +16,5 @@ script:
 deploy:
   provider: surge
   project: .
-  domain: juandi.surge.sh
+  domain: juandif1.surge.sh
   skip_cleanup: true
